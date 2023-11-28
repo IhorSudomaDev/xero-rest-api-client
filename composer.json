@@ -9,7 +9,7 @@
 			"email": "sigord.hutner@gmail.com"
 		}
 	],
-	"version":           "0.0.5",
+	"version":           "0.0.7",
 	"require":           {
 		"php":               ">=7.4",
 		"ext-json":          "*",
