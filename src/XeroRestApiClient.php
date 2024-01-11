@@ -4,6 +4,8 @@ namespace XeroRestApiClient;
 
 use GuzzleHttp\Exception\GuzzleException;
 use Throwable;
+use XeroRestApiClient\Requests\Item\GetItemListRequest;
+use XeroRestApiClient\Requests\Item\CreateItemRequest;
 use XeroRestApiClient\Authorization\AccessToken;
 use XeroRestApiClient\Authorization\Authorization;
 use XeroRestApiClient\Exceptions\InvoiceNotFoundException;
@@ -208,6 +210,18 @@ class XeroRestApiClient
 		/*** @var Invoice $invoice */
 		$invoice = $this->getInvoiceRequest($identifier)->send();
 		return new SendInvoiceRequest($this->getAuthorization(), $invoice->getInvoiceID());
+	}
+
+	/*** @return CreateItemRequest */
+	public function createItemRequest(): CreateItemRequest
+	{
+		return new CreateItemRequest($this->getAuthorization());
+	}
+
+	/*** @return GetItemListRequest */
+	public function getItemListRequest(): GetItemListRequest
+	{
+		return new GetItemListRequest($this->getAuthorization());
 	}
 
 	/*** @return GetOrganisationRequest */

@@ -23,6 +23,8 @@ class Model
 	/*** @var string */
 	public const INVOICE = 'Invoice';
 	/*** @var string */
+	public const ITEM = 'Item';
+	/*** @var string */
 	public const ORGANISATION = 'Organisation';
 	/*** @var string */
 	public const REPEATING_INVOICE = 'RepeatingInvoice';

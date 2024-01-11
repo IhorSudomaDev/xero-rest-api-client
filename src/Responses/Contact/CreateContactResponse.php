@@ -2,13 +2,14 @@
 
 namespace XeroRestApiClient\Responses\Contact;
 
+use XeroRestApiClient\Responses\Abstracts\ASingleModelResponse;
 use XeroRestApiClient\ValueObjects\Model;
 
 /**
  * Class CreateContactResponse
- * @package XeroRestApiClient\Responses\Contact
+ * @package XeroApiClient\Responses\Contact
  */
-class CreateContactResponse
+class CreateContactResponse extends ASingleModelResponse
 {
 	/*** @var string */
 	protected string $modelClass = Model::CONTACT;

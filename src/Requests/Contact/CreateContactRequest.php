@@ -59,6 +59,16 @@ class CreateContactRequest extends ARequest
 	}
 
 	/**
+	 * @param string $contactNumber
+	 * @return $this
+	 */
+	public function withContactNumber(string $contactNumber): self
+	{
+		$this->availableInputParameters['ContactNumber'] = $contactNumber;
+		return $this;
+	}
+
+	/**
 	 * @param string $accountNumber
 	 * @return $this
 	 */

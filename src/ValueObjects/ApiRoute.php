@@ -31,6 +31,8 @@ class ApiRoute
 	/*** @var string */
 	public const INVOICES = 'Invoices';
 	/*** @var string */
+	public const ITEMS = 'Items';
+	/*** @var string */
 	public const ORGANISATIONS = 'Organisation';
 	/*** @var string */
 	public const REPEATING_INVOICES = 'RepeatingInvoices';
@@ -43,6 +45,7 @@ class ApiRoute
 		self::CONTACT_GROUPS     => 'ContactGroups/%s',
 		self::CURRENCIES         => 'Currencies',
 		self::INVOICES           => 'Invoices/%s',
+		self::ITEMS              => 'Items/%s',
 		self::ORGANISATIONS      => 'Organisation',
 		self::REPEATING_INVOICES => 'RepeatingInvoices/%s',
 	];
