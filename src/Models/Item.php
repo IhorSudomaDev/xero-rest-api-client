@@ -14,6 +14,7 @@ namespace XeroRestApiClient\Models;
  * @property string|NULL PurchaseDetails
  * @property string|NULL SalesDetails
  * @property bool|NULL   IsTrackedAsInventory
+ * @property string      InventoryAssetAccountCode
  * @property float       TotalCostPool
  * @property float       QuantityOnHand
  * @property string|NULL UpdatedDateUTC
@@ -151,6 +152,18 @@ class Item
 	public function setTotalCostPool(float $TotalCostPool): void
 	{
 		$this->TotalCostPool = $TotalCostPool;
+	}
+
+	/*** @return string */
+	public function getInventoryAssetAccountCode(): string
+	{
+		return $this->InventoryAssetAccountCode;
+	}
+
+	/*** @param string $InventoryAssetAccountCode */
+	public function setInventoryAssetAccountCode(string $InventoryAssetAccountCode): void
+	{
+		$this->InventoryAssetAccountCode = $InventoryAssetAccountCode;
 	}
 
 	/*** @return float */

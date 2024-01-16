@@ -2,8 +2,6 @@
 
 namespace XeroRestApiClient\Requests\Item;
 
-
-
 use XeroRestApiClient\Requests\Abstracts\ARequest;
 use XeroRestApiClient\Responses\Item\GetItemListResponse;
 use XeroRestApiClient\ValueObjects\ApiRoute;
@@ -11,7 +9,7 @@ use XeroRestApiClient\ValueObjects\RequestMethod;
 
 /**
  * Class GetItemListRequest
- * @package XeroApiClient\Requests\Item
+ * @package XeroRestApiClient\Requests\Item
  */
 class GetItemListRequest extends ARequest
 {

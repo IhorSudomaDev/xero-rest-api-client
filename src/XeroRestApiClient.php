@@ -4,6 +4,7 @@ namespace XeroRestApiClient;
 
 use GuzzleHttp\Exception\GuzzleException;
 use Throwable;
+use XeroRestApiClient\Requests\Item\DeleteItemRequest;
 use XeroRestApiClient\Requests\Item\GetItemListRequest;
 use XeroRestApiClient\Requests\Item\CreateItemRequest;
 use XeroRestApiClient\Authorization\AccessToken;
@@ -212,10 +213,13 @@ class XeroRestApiClient
 		return new SendInvoiceRequest($this->getAuthorization(), $invoice->getInvoiceID());
 	}
 
-	/*** @return CreateItemRequest */
-	public function createItemRequest(): CreateItemRequest
+	/**
+	 * @param string $code
+	 * @return CreateItemRequest
+	 */
+	public function createItemRequest(string $code): CreateItemRequest
 	{
-		return new CreateItemRequest($this->getAuthorization());
+		return new CreateItemRequest($this->getAuthorization(), $code);
 	}
 
 	/*** @return GetItemListRequest */
@@ -223,6 +227,16 @@ class XeroRestApiClient
 	{
 		return new GetItemListRequest($this->getAuthorization());
 	}
+
+	/**
+	 * @param string $identifier
+	 * @return DeleteItemRequest
+	 */
+	public function deleteItemRequest(string $identifier): DeleteItemRequest
+	{
+		return new DeleteItemRequest($this->getAuthorization(), $identifier);
+	}
+
 
 	/*** @return GetOrganisationRequest */
 	public function getOrganisationRequest(): GetOrganisationRequest
